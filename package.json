@@ -1,0 +1,27 @@
+{
+  "name": "testing-headers",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "sqlite3": "^4.0.2",
+    "swig": "^1.4.2",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.22.2"
+  },
+  "engines": {
+    "node": "9.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/my-glitch-app"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
