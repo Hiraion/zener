@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administración</title>
+</head>
+<body>
+  <form method="POST">
+    <textarea name="sql" style="width:100%; height:150px; margin-bottom:10px;">{{sql}}</textarea>
+    <button type="submit">Run Query</button>  
+  </form>
+  {% for result in results %}
+    <div>
+      {{result | json}}  
+    </div>
+  {% endfor %}
+  {% if err %}
+    <div style="color:red;">
+      {{err.message}}
+    </div>
+  {% endif %}
+</body>
+</html>

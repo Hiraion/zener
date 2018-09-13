@@ -1,0 +1,10 @@
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const swig = require("swig");
+const api = require('./routes/api');
+app.set('view engine', 'html');
+app.engine('html', swig.renderFile);
+app.use(bodyParser.urlencoded({extended : false}));
+app.use('/', api);
+app.listen(process.env.PORT);
